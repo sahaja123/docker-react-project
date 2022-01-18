@@ -1,0 +1,10 @@
+FROM node:12-alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+RUN npm install
+
+#COPY . . #this is not must now, there is a mounted volume on compose file
+
+CMD ["npm", "run", "start"]
