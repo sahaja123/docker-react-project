@@ -5,5 +5,5 @@ services:
 before_install:
   - docker build -t sahaja/docker-react-project -f Dockerfile.dev .
 
-scripts:
+script:
   - docker run sahaja/docker-react-project npm run test -- --coverage
